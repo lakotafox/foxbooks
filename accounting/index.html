@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnBooks - Educational Accounting</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Avenir:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar Navigation (QuickBooks Style) -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <span class="logo-text">LearnBooks</span>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search transactions">
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item active" data-page="dashboard">
+                    <a href="#dashboard">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="invoicing">
+                    <a href="#invoicing">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <span>Invoicing</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="expenses">
+                    <a href="#expenses">
+                        <i class="fas fa-receipt"></i>
+                        <span>Expenses</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="banking">
+                    <a href="#banking">
+                        <i class="fas fa-university"></i>
+                        <span>Banking</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="reports">
+                    <a href="#reports">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="accounting">
+                    <a href="#accounting">
+                        <i class="fas fa-calculator"></i>
+                        <span>Accounting</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <div class="nav-item">
+                    <a href="#settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#help">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Help</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header Bar -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="breadcrumb">
+                        <span class="current-page">Dashboard</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-actions">
+                        <button class="btn btn-create">
+                            <i class="fas fa-plus"></i>
+                            <span>Create</span>
+                            <i class="fas fa-caret-down"></i>
+                        </button>
+                    </div>
+                    <div class="header-notifications">
+                        <button class="icon-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    <div class="header-profile">
+                        <div class="company-selector">
+                            <span class="company-name">Demo Company</span>
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                        <div class="user-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content Container -->
+            <div class="page-container">
+                <!-- Dashboard Page -->
+                <section id="dashboard" class="page active">
+                    <div class="page-header">
+                        <h1>Dashboard</h1>
+                        <div class="date-range-selector">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-calendar"></i>
+                                <span>This Month</span>
+                                <i class="fas fa-caret-down"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- KPI Cards Row -->
+                    <div class="kpi-row">
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span class="kpi-label">Total Income</span>
+                                <i class="fas fa-arrow-up kpi-trend positive"></i>
+                            </div>
+                            <div class="kpi-value">$24,500.00</div>
+                            <div class="kpi-comparison">
+                                <span class="positive">+12.5%</span> vs last month
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span class="kpi-label">Total Expenses</span>
+                                <i class="fas fa-arrow-down kpi-trend negative"></i>
+                            </div>
+                            <div class="kpi-value">$8,234.00</div>
+                            <div class="kpi-comparison">
+                                <span class="negative">+5.2%</span> vs last month
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span class="kpi-label">Net Profit</span>
+                                <i class="fas fa-arrow-up kpi-trend positive"></i>
+                            </div>
+                            <div class="kpi-value">$16,266.00</div>
+                            <div class="kpi-comparison">
+                                <span class="positive">+18.3%</span> vs last month
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span class="kpi-label">Invoices Due</span>
+                                <i class="fas fa-clock kpi-icon warning"></i>
+                            </div>
+                            <div class="kpi-value">$4,850.00</div>
+                            <div class="kpi-comparison">
+                                <span class="warning">5 invoices</span> overdue
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Widgets -->
+                    <div class="dashboard-grid">
+                        <!-- Profit & Loss Summary -->
+                        <div class="widget widget-large">
+                            <div class="widget-header">
+                                <h3>Profit & Loss</h3>
+                                <a href="#reports" class="widget-link">View Report</a>
+                            </div>
+                            <div class="widget-content">
+                                <div class="chart-container">
+                                    <canvas id="profitLossChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bank Accounts -->
+                        <div class="widget">
+                            <div class="widget-header">
+                                <h3>Bank Accounts</h3>
+                                <a href="#banking" class="widget-link">See All</a>
+                            </div>
+                            <div class="widget-content">
+                                <div class="bank-account-list">
+                                    <div class="bank-account-item">
+                                        <div class="bank-icon">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <div class="bank-info">
+                                            <span class="bank-name">Business Checking</span>
+                                            <span class="bank-number">****4523</span>
+                                        </div>
+                                        <div class="bank-balance">
+                                            <span class="balance-amount">$45,230.00</span>
+                                            <span class="balance-label">In QuickBooks</span>
+                                        </div>
+                                    </div>
+                                    <div class="bank-account-item">
+                                        <div class="bank-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <div class="bank-info">
+                                            <span class="bank-name">Business Credit Card</span>
+                                            <span class="bank-number">****8891</span>
+                                        </div>
+                                        <div class="bank-balance negative">
+                                            <span class="balance-amount">-$2,340.00</span>
+                                            <span class="balance-label">In QuickBooks</span>
+                                        </div>
+                                    </div>
+                                    <div class="bank-account-item">
+                                        <div class="bank-icon">
+                                            <i class="fas fa-piggy-bank"></i>
+                                        </div>
+                                        <div class="bank-info">
+                                            <span class="bank-name">Business Savings</span>
+                                            <span class="bank-number">****7712</span>
+                                        </div>
+                                        <div class="bank-balance">
+                                            <span class="balance-amount">$125,000.00</span>
+                                            <span class="balance-label">In QuickBooks</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Invoices Overview -->
+                        <div class="widget">
+                            <div class="widget-header">
+                                <h3>Invoices</h3>
+                                <a href="#invoicing" class="widget-link">Create Invoice</a>
+                            </div>
+                            <div class="widget-content">
+                                <div class="invoice-summary">
+                                    <div class="invoice-stat">
+                                        <div class="stat-bar">
+                                            <div class="stat-bar-fill overdue" style="width: 25%"></div>
+                                        </div>
+                                        <div class="stat-info">
+                                            <span class="stat-label">Overdue</span>
+                                            <span class="stat-value overdue">$4,850</span>
+                                        </div>
+                                    </div>
+                                    <div class="invoice-stat">
+                                        <div class="stat-bar">
+                                            <div class="stat-bar-fill due-soon" style="width: 35%"></div>
+                                        </div>
+                                        <div class="stat-info">
+                                            <span class="stat-label">Due within 30 days</span>
+                                            <span class="stat-value">$8,200</span>
+                                        </div>
+                                    </div>
+                                    <div class="invoice-stat">
+                                        <div class="stat-bar">
+                                            <div class="stat-bar-fill paid" style="width: 60%"></div>
+                                        </div>
+                                        <div class="stat-info">
+                                            <span class="stat-label">Paid last 30 days</span>
+                                            <span class="stat-value paid">$18,500</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expense Breakdown -->
+                        <div class="widget">
+                            <div class="widget-header">
+                                <h3>Expense Breakdown</h3>
+                                <a href="#expenses" class="widget-link">View All</a>
+                            </div>
+                            <div class="widget-content">
+                                <div class="chart-container-small">
+                                    <canvas id="expenseChart"></canvas>
+                                </div>
+                                <div class="expense-legend">
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background: #2CA01C"></span>
+                                        <span class="legend-label">Payroll</span>
+                                        <span class="legend-value">45%</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background: #0077C5"></span>
+                                        <span class="legend-label">Rent</span>
+                                        <span class="legend-value">25%</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background: #F5A623"></span>
+                                        <span class="legend-label">Utilities</span>
+                                        <span class="legend-value">15%</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background: #8B5CF6"></span>
+                                        <span class="legend-label">Other</span>
+                                        <span class="legend-value">15%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Invoicing Page -->
+                <section id="invoicing" class="page">
+                    <div class="page-header">
+                        <h1>Invoices</h1>
+                        <div class="page-actions">
+                            <button class="btn btn-primary" id="createInvoiceBtn">
+                                <i class="fas fa-plus"></i>
+                                Create Invoice
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Invoice Stats -->
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <span class="stat-card-value overdue">$4,850</span>
+                            <span class="stat-card-label">Overdue</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-card-value">$8,200</span>
+                            <span class="stat-card-label">Due in 30 days</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-card-value">$3,100</span>
+                            <span class="stat-card-label">Due later</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-card-value deposited">$18,500</span>
+                            <span class="stat-card-label">Deposited</span>
+                        </div>
+                    </div>
+
+                    <!-- Invoice Tabs -->
+                    <div class="tabs">
+                        <button class="tab active" data-tab="all">All Invoices</button>
+                        <button class="tab" data-tab="unpaid">Unpaid</button>
+                        <button class="tab" data-tab="paid">Paid</button>
+                        <button class="tab" data-tab="overdue">Overdue</button>
+                    </div>
+
+                    <!-- Invoice Table -->
+                    <div class="data-table-container">
+                        <div class="table-toolbar">
+                            <div class="table-search">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search invoices...">
+                            </div>
+                            <div class="table-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-filter"></i>
+                                    Filter
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-download"></i>
+                                    Export
+                                </button>
+                            </div>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" class="checkbox"></th>
+                                    <th>Date</th>
+                                    <th>Invoice #</th>
+                                    <th>Customer</th>
+                                    <th>Due Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="invoiceTableBody">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Expenses Page -->
+                <section id="expenses" class="page">
+                    <div class="page-header">
+                        <h1>Expenses</h1>
+                        <div class="page-actions">
+                            <button class="btn btn-primary" id="addExpenseBtn">
+                                <i class="fas fa-plus"></i>
+                                Add Expense
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Expense Stats -->
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <span class="stat-card-value">$8,234</span>
+                            <span class="stat-card-label">This Month</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-card-value">$7,850</span>
+                            <span class="stat-card-label">Last Month</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-card-value warning">$1,250</span>
+                            <span class="stat-card-label">Uncategorized</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-card-value">$45,600</span>
+                            <span class="stat-card-label">YTD Total</span>
+                        </div>
+                    </div>
+
+                    <!-- Expense Table -->
+                    <div class="data-table-container">
+                        <div class="table-toolbar">
+                            <div class="table-search">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search expenses...">
+                            </div>
+                            <div class="table-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-filter"></i>
+                                    Filter
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-upload"></i>
+                                    Import
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-download"></i>
+                                    Export
+                                </button>
+                            </div>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" class="checkbox"></th>
+                                    <th>Date</th>
+                                    <th>Vendor</th>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="expenseTableBody">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Banking Page -->
+                <section id="banking" class="page">
+                    <div class="page-header">
+                        <h1>Banking</h1>
+                        <div class="page-actions">
+                            <button class="btn btn-primary" id="connectBankBtn">
+                                <i class="fas fa-link"></i>
+                                Connect Account
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Bank Accounts Cards -->
+                    <div class="bank-cards-row">
+                        <div class="bank-card">
+                            <div class="bank-card-header">
+                                <div class="bank-card-icon checking">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="bank-card-menu">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                            <div class="bank-card-info">
+                                <h3>Business Checking</h3>
+                                <span class="account-number">****4523</span>
+                            </div>
+                            <div class="bank-card-balance">
+                                <span class="balance-label">Bank Balance</span>
+                                <span class="balance-value">$45,892.34</span>
+                            </div>
+                            <div class="bank-card-qb-balance">
+                                <span class="balance-label">In LearnBooks</span>
+                                <span class="balance-value">$45,230.00</span>
+                            </div>
+                            <div class="bank-card-footer">
+                                <span class="transactions-pending">12 transactions to review</span>
+                                <button class="btn btn-link">Go to Bank Register</button>
+                            </div>
+                        </div>
+
+                        <div class="bank-card">
+                            <div class="bank-card-header">
+                                <div class="bank-card-icon credit">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="bank-card-menu">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                            <div class="bank-card-info">
+                                <h3>Business Credit Card</h3>
+                                <span class="account-number">****8891</span>
+                            </div>
+                            <div class="bank-card-balance">
+                                <span class="balance-label">Bank Balance</span>
+                                <span class="balance-value negative">-$2,540.00</span>
+                            </div>
+                            <div class="bank-card-qb-balance">
+                                <span class="balance-label">In LearnBooks</span>
+                                <span class="balance-value negative">-$2,340.00</span>
+                            </div>
+                            <div class="bank-card-footer">
+                                <span class="transactions-pending">8 transactions to review</span>
+                                <button class="btn btn-link">Go to Bank Register</button>
+                            </div>
+                        </div>
+
+                        <div class="bank-card">
+                            <div class="bank-card-header">
+                                <div class="bank-card-icon savings">
+                                    <i class="fas fa-piggy-bank"></i>
+                                </div>
+                                <div class="bank-card-menu">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                            <div class="bank-card-info">
+                                <h3>Business Savings</h3>
+                                <span class="account-number">****7712</span>
+                            </div>
+                            <div class="bank-card-balance">
+                                <span class="balance-label">Bank Balance</span>
+                                <span class="balance-value">$125,000.00</span>
+                            </div>
+                            <div class="bank-card-qb-balance">
+                                <span class="balance-label">In LearnBooks</span>
+                                <span class="balance-value">$125,000.00</span>
+                            </div>
+                            <div class="bank-card-footer">
+                                <span class="transactions-pending">0 transactions to review</span>
+                                <button class="btn btn-link">Go to Bank Register</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bank Transactions for Review -->
+                    <div class="widget widget-full">
+                        <div class="widget-header">
+                            <h3>For Review</h3>
+                            <div class="widget-tabs">
+                                <button class="tab active">For Review (20)</button>
+                                <button class="tab">Categorized (156)</button>
+                                <button class="tab">Excluded (3)</button>
+                            </div>
+                        </div>
+                        <div class="widget-content">
+                            <div class="bank-transactions-list" id="bankTransactionsList">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reports Page -->
+                <section id="reports" class="page">
+                    <div class="page-header">
+                        <h1>Reports</h1>
+                        <div class="page-actions">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-star"></i>
+                                Customize Reports
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Report Categories -->
+                    <div class="report-categories">
+                        <div class="report-category">
+                            <div class="report-category-header">
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Business Overview</h3>
+                            </div>
+                            <ul class="report-list">
+                                <li class="report-item" data-report="profit-loss">
+                                    <span class="report-name">Profit and Loss</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                                <li class="report-item" data-report="balance-sheet">
+                                    <span class="report-name">Balance Sheet</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                                <li class="report-item" data-report="cash-flow">
+                                    <span class="report-name">Statement of Cash Flows</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="report-category">
+                            <div class="report-category-header">
+                                <i class="fas fa-users"></i>
+                                <h3>Who Owes You</h3>
+                            </div>
+                            <ul class="report-list">
+                                <li class="report-item" data-report="ar-aging">
+                                    <span class="report-name">Accounts Receivable Aging</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                                <li class="report-item" data-report="customer-balance">
+                                    <span class="report-name">Customer Balance Summary</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                                <li class="report-item" data-report="invoice-list">
+                                    <span class="report-name">Invoice List</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="report-category">
+                            <div class="report-category-header">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <h3>What You Owe</h3>
+                            </div>
+                            <ul class="report-list">
+                                <li class="report-item" data-report="ap-aging">
+                                    <span class="report-name">Accounts Payable Aging</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                                <li class="report-item" data-report="vendor-balance">
+                                    <span class="report-name">Vendor Balance Summary</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                                <li class="report-item" data-report="bill-list">
+                                    <span class="report-name">Unpaid Bills</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="report-category">
+                            <div class="report-category-header">
+                                <i class="fas fa-wallet"></i>
+                                <h3>Expenses & Vendors</h3>
+                            </div>
+                            <ul class="report-list">
+                                <li class="report-item" data-report="expense-by-vendor">
+                                    <span class="report-name">Expenses by Vendor</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                                <li class="report-item" data-report="expense-by-category">
+                                    <span class="report-name">Expenses by Category</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                                <li class="report-item" data-report="transaction-list">
+                                    <span class="report-name">Transaction List by Date</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Report Viewer (shown when a report is selected) -->
+                    <div class="report-viewer" id="reportViewer" style="display: none;">
+                        <div class="report-viewer-header">
+                            <button class="btn btn-link back-btn" id="backToReports">
+                                <i class="fas fa-arrow-left"></i>
+                                Back to Reports
+                            </button>
+                            <div class="report-viewer-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-print"></i>
+                                    Print
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-download"></i>
+                                    Export
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-envelope"></i>
+                                    Email
+                                </button>
+                            </div>
+                        </div>
+                        <div class="report-content" id="reportContent">
+                            <!-- Report content loaded dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Accounting Page (Chart of Accounts) -->
+                <section id="accounting" class="page">
+                    <div class="page-header">
+                        <h1>Chart of Accounts</h1>
+                        <div class="page-actions">
+                            <button class="btn btn-primary" id="addAccountBtn">
+                                <i class="fas fa-plus"></i>
+                                New Account
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Account Type Filter -->
+                    <div class="filter-bar">
+                        <div class="filter-group">
+                            <label>Account Type:</label>
+                            <select class="select-input" id="accountTypeFilter">
+                                <option value="all">All Types</option>
+                                <option value="asset">Assets</option>
+                                <option value="liability">Liabilities</option>
+                                <option value="equity">Equity</option>
+                                <option value="income">Income</option>
+                                <option value="expense">Expenses</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="showInactive">
+                                Show inactive accounts
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Chart of Accounts Table -->
+                    <div class="data-table-container">
+                        <table class="data-table coa-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Detail Type</th>
+                                    <th>QuickBooks Balance</th>
+                                    <th>Bank Balance</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="coaTableBody">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <!-- Create Invoice Modal -->
+    <div class="modal-overlay" id="invoiceModal">
+        <div class="modal modal-large">
+            <div class="modal-header">
+                <h2>Create Invoice</h2>
+                <button class="modal-close" data-close-modal>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="invoiceForm" class="form-grid">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Customer</label>
+                            <select class="select-input" name="customer" required>
+                                <option value="">Select customer...</option>
+                                <option value="1">Acme Corporation</option>
+                                <option value="2">Tech Solutions Inc.</option>
+                                <option value="3">Global Industries</option>
+                                <option value="4">Smith & Associates</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Invoice Date</label>
+                            <input type="date" class="text-input" name="invoiceDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Due Date</label>
+                            <input type="date" class="text-input" name="dueDate" required>
+                        </div>
+                    </div>
+
+                    <div class="line-items-section">
+                        <h3>Line Items</h3>
+                        <table class="line-items-table">
+                            <thead>
+                                <tr>
+                                    <th>Service/Product</th>
+                                    <th>Description</th>
+                                    <th>Qty</th>
+                                    <th>Rate</th>
+                                    <th>Amount</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="lineItemsBody">
+                                <tr class="line-item">
+                                    <td>
+                                        <select class="select-input" name="product">
+                                            <option value="">Select...</option>
+                                            <option value="consulting">Consulting Services</option>
+                                            <option value="design">Design Services</option>
+                                            <option value="development">Development</option>
+                                            <option value="support">Support</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" class="text-input" name="description"></td>
+                                    <td><input type="number" class="text-input" name="qty" value="1" min="1"></td>
+                                    <td><input type="number" class="text-input" name="rate" value="0" step="0.01"></td>
+                                    <td class="line-amount">$0.00</td>
+                                    <td>
+                                        <button type="button" class="btn btn-icon btn-delete-line">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-link" id="addLineItem">
+                            <i class="fas fa-plus"></i> Add line
+                        </button>
+                    </div>
+
+                    <div class="invoice-totals">
+                        <div class="totals-row">
+                            <span>Subtotal</span>
+                            <span id="invoiceSubtotal">$0.00</span>
+                        </div>
+                        <div class="totals-row">
+                            <span>Tax (0%)</span>
+                            <span id="invoiceTax">$0.00</span>
+                        </div>
+                        <div class="totals-row total">
+                            <span>Total</span>
+                            <span id="invoiceTotal">$0.00</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" data-close-modal>Cancel</button>
+                <button class="btn btn-secondary">Save as Draft</button>
+                <button class="btn btn-primary" id="saveInvoice">Save and Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Expense Modal -->
+    <div class="modal-overlay" id="expenseModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Add Expense</h2>
+                <button class="modal-close" data-close-modal>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="expenseForm">
+                    <div class="form-group">
+                        <label>Vendor</label>
+                        <select class="select-input" name="vendor" required>
+                            <option value="">Select vendor...</option>
+                            <option value="1">Office Depot</option>
+                            <option value="2">Amazon Business</option>
+                            <option value="3">Utility Company</option>
+                            <option value="4">Insurance Provider</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="date" class="text-input" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Amount</label>
+                            <input type="number" class="text-input" name="amount" step="0.01" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select class="select-input" name="category" required>
+                            <option value="">Select category...</option>
+                            <option value="office">Office Supplies</option>
+                            <option value="rent">Rent</option>
+                            <option value="utilities">Utilities</option>
+                            <option value="travel">Travel</option>
+                            <option value="meals">Meals & Entertainment</option>
+                            <option value="software">Software & Subscriptions</option>
+                            <option value="professional">Professional Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="text-input" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Receipt</label>
+                        <div class="file-upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Drag & drop or click to upload</span>
+                            <input type="file" name="receipt" accept="image/*,.pdf">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" data-close-modal>Cancel</button>
+                <button class="btn btn-primary" id="saveExpense">Save Expense</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Account Modal -->
+    <div class="modal-overlay" id="accountModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Add Account</h2>
+                <button class="modal-close" data-close-modal>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="accountForm">
+                    <div class="form-group">
+                        <label>Account Type</label>
+                        <select class="select-input" name="accountType" required>
+                            <option value="">Select type...</option>
+                            <option value="asset">Asset</option>
+                            <option value="liability">Liability</option>
+                            <option value="equity">Equity</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Detail Type</label>
+                        <select class="select-input" name="detailType" required>
+                            <option value="">Select detail type...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="text-input" name="accountName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="text-input" name="description" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="isSubAccount">
+                            Is sub-account
+                        </label>
+                    </div>
+                    <div class="form-group" id="parentAccountGroup" style="display: none;">
+                        <label>Parent Account</label>
+                        <select class="select-input" name="parentAccount">
+                            <option value="">Select parent...</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" data-close-modal>Cancel</button>
+                <button class="btn btn-primary" id="saveAccount">Save Account</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Educational Tooltip -->
+    <div class="edu-tooltip" id="eduTooltip">
+        <div class="edu-tooltip-header">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Learn</span>
+            <button class="edu-tooltip-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="edu-tooltip-content"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
